@@ -7,6 +7,24 @@
     width: 100%;
     z-index: 15;
 
+    transition: all 0.3s ease 0s;
+
+    &._sticky {
+        background-color: $accent;
+        padding: 10px 0;
+
+        @media (min-width:1025px) {
+            .header__logo svg {
+                width: 150px;
+                height: 70px;
+            }
+
+            .header__body {
+                align-items: center;
+            }
+        }
+    }
+
     // .header__container
 
     &__container {}
@@ -46,8 +64,21 @@
     // .header__left
 
     &__left {
+        display: flex;
+        align-items: center;
+
         @media (max-width:1024px) {
             display: none;
+        }
+    }
+
+    &:not(._sticky) {
+
+        .header__left,
+        .header__right {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $white;
+            min-height: 61px;
         }
     }
 
@@ -78,6 +109,8 @@
             width: 181px;
             height: 87px;
 
+            transition: all 0.3s ease 0s;
+
             @media (max-width:1024px) {
                 width: 84px;
                 height: 40px;
@@ -97,16 +130,16 @@
         height: 40px;
         position: relative;
 
-        span {
+        span { 
             background-color: $white;
             pointer-events: none;
             position: absolute;
             width: 26px;
             height: 1px;
             display: block;
-            left: 50%;
+            right: 0;
             top: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(0, -50%);
 
             &:first-child {
                 top: 12px;
@@ -133,6 +166,8 @@
     }
 
     ._btn {
+        color: $white;
+
         @media (max-width:1440px) {
             font-size: 14px;
         }
@@ -145,6 +180,11 @@
 
 
 .lang {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+
     margin-left: auto;
     text-transform: uppercase;
 
@@ -154,5 +194,20 @@
 
     @media (max-width:1200px) {
         font-size: 12px;
+    }
+
+    span {
+        color: $grey;
+    }
+
+    a {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid currentColor;
     }
 }

@@ -3,7 +3,7 @@ export const stickyHeader = () => {
 
     if (!header) return
 
-    const headerheigth = header.getBoundingClientRect().height;
+    const headerheigth = header.getBoundingClientRect().height * 0.65;
 
     const sticky = () => {
         if (window.scrollY > headerheigth) {

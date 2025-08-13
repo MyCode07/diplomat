@@ -9,120 +9,97 @@ if (sliders.length) {
         const next = section.querySelector('.next');
         const pagination = section.querySelector('.pagination');
 
-        if (slider.closest('.clients')) {
+        if (slider.closest('.rooms')) {
             new Swiper(slider, {
                 modules: [
-                    Navigation
                 ],
-                spaceBetween: 16,
-                slidesPerView: 4,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
-            });
-        }
-
-
-        if (slider.closest('.reviews')) {
-            new Swiper(slider, {
-                modules: [
-                    Navigation
-                ],
-                spaceBetween: 16,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
-
-                breakpoints: {
-                    769: {
-                        slidesPerView: 4,
-                    },
-                    300: {
-                        slidesPerView: 2,
-                    }
-                }
-            });
-        }
-
-        if (slider.closest('.single-product')) {
-            const thumbs = new Swiper('.slider-small', {
-                modules: [
-                    FreeMode
-                ],
-                freeMode: true,
-                watchSlidesProgress: true,
-                slidesPerView: 'auto',
-                spaceBetween: 8,
-            });
-
-            new Swiper('.slider-big', {
-                modules: [
-                    Thumbs, Navigation
-                ],
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
                 spaceBetween: 10,
-                slidesPerView: 1,
-                thumbs: {
-                    swiper: thumbs,
-                },
+                slidesPerView: 'auto',
             });
         }
 
-        if (slider.closest('.related')) {
+        if (slider.closest('.offers')) {
             new Swiper(slider, {
                 modules: [
                     Navigation
                 ],
-                spaceBetween: 16,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
+                spaceBetween: 10,
+                slidesPerView: 'auto',
+                centeredSlides: true,
 
                 breakpoints: {
-                    769: {
-                        slidesPerView: 4,
-                    },
                     300: {
-                        slidesPerView: 2,
+                        centeredSlides: false,
+                        initialSlide: 0,
+
+                    },
+                    768: {
+                        centeredSlides: true,
+                        initialSlide: 2,
                     }
                 }
             });
         }
 
-        if (slider.closest('.case-images')) {
-            new Swiper(slider, {
-                modules: [
-                    Navigation
-                ],
-                spaceBetween: 16,
-                slidesPerView: 1,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
-            });
+        if (slider.closest('.restourant')) {
+
+            if (slider.closest('.image')) {
+                new Swiper(slider, {
+                    modules: [
+                        Pagination
+                    ],
+                    spaceBetween: 10,
+                    slidesPerView: 1,
+                    pagination: {
+                        el: pagination,
+                        clickable: true
+                    }
+
+                });
+            }
+
+            if (slider.closest('.restourant-contnet')) {
+                new Swiper(slider, {
+                    modules: [
+                        Pagination
+                    ],
+                    spaceBetween: 10,
+                    slidesPerView: 'auto',
+                    pagination: {
+                        el: pagination,
+                        clickable: true
+                    }
+                });
+            }
         }
 
-        if (slider.closest('.case-products')) {
+        if (slider.closest('.conference')) {
             new Swiper(slider, {
                 modules: [
                     Pagination
                 ],
-                spaceBetween: 16,
+                spaceBetween: 10,
                 slidesPerView: 1,
                 pagination: {
                     el: pagination,
-                    clickable: true,
-                },
+                    clickable: true
+                }
             });
         }
-        
+
+        if (slider.closest('.services')) {
+            new Swiper(slider, {
+                modules: [
+                    Navigation
+                ],
+                spaceBetween: 10,
+                slidesPerView: 1,
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next
+                }
+            });
+        }
     })
 }
 
