@@ -6,9 +6,10 @@
 
     &-2 {
         grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
 
-        @media(max-width:768px) {
-            gap: 15px;
+        @media(max-width:1024px) {
+            gap: 30px;
             grid-template-columns: 1fr;
         }
     }
@@ -29,14 +30,33 @@
 
     &-4 {
         grid-template-columns: repeat(4, 1fr);
+        @include adaptive-value('gap', 100, 0, 1);
+
 
         @media(max-width:992px) {
             grid-template-columns: repeat(3, 1fr);
         }
 
         @media(max-width:768px) {
-            gap: 15px;
+            gap: 30px;
             grid-template-columns: repeat(2, 1fr);
         }
     }
-} 
+
+    // .grid-5
+
+    &-5 {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 60px 0;
+
+        @media(max-width:1024px) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        @media(max-width:768px) {
+            gap: 40px 0;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

@@ -25,24 +25,16 @@ if (sliders.length) {
                 ],
                 spaceBetween: 10,
                 slidesPerView: 'auto',
-                centeredSlides: true,
-
                 breakpoints: {
                     300: {
-                        centeredSlides: false,
-                        initialSlide: 0,
-
                     },
                     768: {
-                        centeredSlides: true,
-                        initialSlide: 2,
                     }
                 }
             });
         }
 
         if (slider.closest('.restourant')) {
-
             if (slider.closest('.image')) {
                 new Swiper(slider, {
                     modules: [
@@ -61,14 +53,9 @@ if (sliders.length) {
             if (slider.closest('.restourant-contnet')) {
                 new Swiper(slider, {
                     modules: [
-                        Pagination
                     ],
                     spaceBetween: 10,
                     slidesPerView: 'auto',
-                    pagination: {
-                        el: pagination,
-                        clickable: true
-                    }
                 });
             }
         }
@@ -98,6 +85,43 @@ if (sliders.length) {
                     prevEl: prev,
                     nextEl: next
                 }
+            });
+        }
+
+        if (slider.closest('.info')) {
+            new Swiper(slider, {
+                modules: [
+                    Pagination
+                ],
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+                spaceBetween: 10,
+                slidesPerView: 1,
+            });
+        }
+
+        if (slider.closest('.other')) {
+            new Swiper(slider, {
+                slidesPerView: 'auto',
+
+                breakpoints: {
+                    300: {
+                        spaceBetween: 10,
+                    },
+                    768: {
+                        spaceBetween: 18,
+                    }
+                }
+
+            });
+        }
+
+        if (slider.closest('.restourant-menu__list')) {
+            new Swiper(slider, {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
             });
         }
     })

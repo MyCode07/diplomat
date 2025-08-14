@@ -25,6 +25,43 @@
         }
     }
 
+    &._dark {
+        
+    }
+
+    &._dark:not(._sticky) {
+        color: $accent;
+
+        .header__logo {
+            svg,
+                path {
+                fill: $accent;
+            }
+        }
+
+        ._btn {
+            color: $accent;
+            border-color: $accent;
+
+            @media (max-width:1440px) {
+                font-size: 14px;
+            }
+
+            @media (max-width:1200px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // .header__logo
+    &__logo {
+
+        svg,
+        path {
+            fill: $white;
+        }
+    }
+
     // .header__container
 
     &__container {}
@@ -50,12 +87,108 @@
                 font-size: 12px;
             }
 
-            ul {
+            & > ul {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                gap: 20px;
 
+                & > li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    gap: 5px;
+                    white-space: nowrap;
+                    position: relative;
+                    transition: all 0.3s ease 0s;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            @include linkHover;
+                        }
+                    }
+
+                    &[data-open="open"] {
+                        @include linkHover;
+                    }
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        height: 15px;
+                        width: 15px;
+
+                        @media (any-hover: hover) {
+                            display: none;
+                        }
+
+                        svg {
+                            stroke: $white;
+                            transition: all 0.3s ease 0s;
+                        }
+                    }
+
+
+                    & > ul {
+                        position: absolute;
+                        top: calc(100% + 15px);
+                        left: 0;
+                        width: fit-content;
+                        pointer-events: none;
+                        height: 0;
+                        opacity: 0;
+                        padding-inline: 20px;
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        background-color: $accent;
+
+                        li {
+                            white-space: nowrap;
+                            text-align: left;
+                            width: 100%;
+
+                            a {
+                                display: flex;
+
+                                width: 100%;
+                                padding: 10px 0;
+                            }
+
+                            &:not(:last-child) {
+                                border-bottom: 1px solid $white;
+                            }
+                        }
+
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            top: -15px;
+                            height: 15px;
+                            width: 100%;
+                        }
+                    }
+                }
+
+
+                li[data-open="open"] {
+                    background-color: $accent;
+
+                    button {
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    ul {
+                        pointer-events: all;
+                        height: auto;
+                    }
+                }
 
             }
         }
@@ -130,7 +263,7 @@
         height: 40px;
         position: relative;
 
-        span { 
+        span {
             background-color: $white;
             pointer-events: none;
             position: absolute;
@@ -176,6 +309,8 @@
             font-size: 12px;
         }
     }
+
+
 }
 
 

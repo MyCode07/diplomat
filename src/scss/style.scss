@@ -52,8 +52,17 @@
 // load hero
 @import "parts/hero";
 
-// load section
+// load cards
 @import "parts/cards";
+
+// load room
+@import "parts/room";
+
+// load single-room
+@import "parts/single-room";
+
+// load restaurant
+@import "parts/restaurant";
 
 .pages {
     position: fixed;

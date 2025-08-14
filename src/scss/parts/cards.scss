@@ -278,3 +278,129 @@
         }
     }
 }
+
+.other-card {
+    display: flex;
+    flex-direction: column;
+
+    // .other-card__image
+
+    &__image {
+        flex: 1 1 auto;
+
+        img,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+    }
+
+    // .other-card__name
+
+    &__name {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        padding-left: 0;
+
+        color: $accent;
+        font-family: "Times New Roman";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @media (max-width:1024px) {
+            font-size: 20px;
+        }
+
+        @media (max-width:768px) {
+            padding: 10px;
+            padding-left: 0;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        &::before {
+            position: relative;
+            content: '';
+            width: 20px;
+            height: 1px;
+            background-color: $accent;
+
+            @media (max-width:768px) {
+                width: 10px;
+            }
+        }
+    }
+}
+
+.menuslider {
+
+    // .menuslider-card
+
+    &-card {}
+}
+
+.menuslider-card {
+    width: 100%;
+
+    // .menuslider-card__image
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 309px;
+        position: relative;
+
+        img,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            left: 11px;
+            top: 11px;
+
+            width: 34px;
+            height: 34px;
+
+            border-top: 1px solid $white;
+            border-left: 1px solid $white;
+            pointer-events: none;
+
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            right: 11px;
+            bottom: 11px;
+
+            width: 34px;
+            height: 34px;
+
+            border-bottom: 1px solid $white;
+            border-right: 1px solid $white;
+            pointer-events: none;
+        }
+    }
+
+    // .menuslider-card__name
+
+    &__name {
+        display: block;
+        margin-top: 11px;
+
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+    }
+}

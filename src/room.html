@@ -1,0 +1,93 @@
+@@include('./html/head.html', {
+"title":"Главная",
+})
+
+@@include('./html/header.html', {
+"class":"_dark",
+})
+
+<main>
+
+    <section class="room page-top">
+        <div class="room__container _container">
+            <div class="room__body">
+                <div class="image _desktop">
+                    <img src="img/rooms/room.png" alt="">
+                </div>
+                <div class="room__content">
+                    <div class="_bread">/room</div>
+                    <div class="room__content-info">
+                        <div class="_decor">/room</div>
+                        <h1>Номера отеля</h1>
+                        <div class="image _mobile">
+                            <img src="img/rooms/room.png" alt="">
+                        </div>
+                        <p class="_main-text">В отеле Diplomat представлены 47 элегантных номеров в четырёх категориях —
+                            от уютных
+                            стандартов
+                            до просторных
+                            полулюксов.</p>
+                        <p>Интерьеры оформлены в современном классическом стиле. В каждом номере — кондиционер, сейф,
+                            холодильник, ванная комната с
+                            косметикой, халатами и тапочками. Wi-Fi доступен на всей территории.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/booking.html',{})
+
+    <section class="section advantages">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <div class="_bread">/Advantages</div>
+                    <h2>Преимущества <br> бронирования у нас</h2>
+                </div>
+
+                <div class="advantages-list">
+                    <ol class="grid grid-2">
+                        <li>
+                            <div class="icon">
+                                <img src="img/icons/adv1.svg" alt="">
+                            </div>
+                            <p>
+                                <label>гарантия лучшей цены</label>
+                                <span>Гибкая система ценообразования в отеле «Дипломат» позволяет нам предлагать гостям
+                                    максимально выгодные условия
+                                    проживания в зависимости от даты и загрузки</span>
+                            </p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="img/icons/adv2.svg" alt="">
+                            </div>
+                            <p>
+                                <label>Гарантия бронирования</label>
+                                <span>После оформления заказа вы моментально получите подтверждение, а мы сделаем всё
+                                    возможное, чтобы учесть ваши пожелания и
+                                    обеспечить комфортное размещение</span>
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="advantages-room">
+                    <div class="grid grid-2">
+                        @@include('html/parts/room-card.html',{})
+                        @@include('html/parts/room-card.html',{})
+                        @@include('html/parts/room-card.html',{})
+                        @@include('html/parts/room-card.html',{})
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/amenities.html',{})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

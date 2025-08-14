@@ -1,0 +1,255 @@
+.restourant-menu {
+    margin-bottom: 80px;
+
+    @media (min-width:1025px) {
+        margin-top: -15%;
+    }
+
+    @media (max-width:1024px) {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
+    .section__body {
+        display: flex;
+
+        @media (min-width:1025px) {
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 97px;
+        }
+
+        @media (max-width:1024px) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .images {
+        flex: 1 1 auto;
+
+        @media (min-width:1025px) {
+            position: relative;
+        }
+
+        & > :first-child {
+
+            img,
+            picture {
+                object-fit: cover;
+
+                @media (min-width:1025px) {
+                    width: 82%;
+                }
+            }
+        }
+
+
+        .small {
+            width: 50%;
+            position: relative;
+            margin-top: -10%;
+            margin-left: auto;
+
+            img,
+            picture {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    // .restourant-menu__content
+
+    &__content {
+        position: relative;
+
+        @media (min-width:1025px) {
+            width: 33%;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 40px;
+
+            @media (max-width:1024px) {
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 768px) {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            @media (max-width:768px) {
+                font-size: 10px;
+            }
+        }
+
+        img,
+        picture {
+            @media (max-width:1024px) {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            @media (max-width:768px) {}
+        }
+    }
+
+    ._btn {
+        width: fit-content;
+
+        @media (max-width:1024px) {
+            margin-top: 30px;
+        }
+    }
+
+    ._decor {
+        @media (min-width:1025px) {
+            transform: translate(0, -70%);
+            right: 0;
+            left: unset;
+        }
+
+        @media (max-width:1024px) {
+            transform: translate(-20px, -70%);
+        }
+    }
+}
+
+
+.restourant-menu__list {
+    .swiper {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        width: 460px;
+
+        @media (max-width:768px) {
+            width: 252px;
+        }
+
+        span {
+            padding-top: 12px;
+
+            @media (max-width:768px) {
+                font-size: 14px;
+            }
+
+            @media (max-width:600px) {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .btns {
+        margin-top: 59px;
+        display: flex;
+        gap: 20px;
+
+        @media (max-width:768px) {
+            flex-direction: column;
+            margin-top: 30px;
+            gap: 10px;
+        }
+    }
+}
+
+.contacts {
+    background-color: $black;
+    color: $white;
+    padding-top: 60px;
+    margin-bottom: 0 !important;
+
+    @media (max-width:1024px) {
+        padding-top: 50px;
+    }
+
+    .section__body {
+        padding-bottom: 124px;
+
+        @media (max-width:1024px) {
+            padding-bottom: 80px;
+        }
+
+        border-bottom: 1px solid $white;
+    }
+
+    .section__top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 67px;
+        gap: 140px;
+
+        @media (max-width:1024px) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: $white;
+            flex: 0 0 auto;
+        }
+
+        p {
+            @media (max-width:768px) {
+                font-size: 14px;
+                max-width: 100%;
+            }
+
+            @media (max-width:600px) {
+                font-size: 10px;
+            }
+        }
+    }
+
+    ol {
+        margin-bottom: 40px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+
+        @media (max-width:1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+
+        @media (max-width:600px) {
+            font-size: 10px;
+        }
+    }
+
+    .map {
+        width: 100%;
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 600px;
+
+            @media (max-width:1024px) {
+                height: 500px;
+            }
+
+            @media (max-width:600px) {
+                height: 400px;
+            }
+
+            object-fit: cover;
+            mix-blend-mode: luminosity;
+        }
+    }
+}
