@@ -1,0 +1,82 @@
+@@include('./html/head.html', {
+"title":"Главная",
+})
+
+@@include('./html/header.html', {
+"class":"_dark",
+})
+
+<main>
+
+    <section class="section page-top info conference-page" data-replace-width="1024">
+        <div class="section__container _container">
+            <div class="section__body" data-replace-old-position="beforeend">
+                <div class="section__content">
+                    <div class="section__top" data-replace-new-position="afterend">
+                        <div class="_decor">/conference</div>
+                        <div class="_bread">/conference</div>
+                        <h1>Конференц-зал</h1>
+                    </div>
+                    <p>Отель «Дипломат» располагает просторным конференц-залом площадью 83 m², который прекрасно
+                        подойдёт для проведения
+                        мероприятий любого формата: конференций, бизнес-тренингов, мастер-классов. Мы сопровождаем
+                        всё мероприятие</p>
+                    <a href="" class="_btn _btn-accent">Связаться</a>
+                    <div class="chars">
+                        <p></p>
+                        <p class="_main-text">
+                            <label>
+                                Вместимость
+                            </label>
+                            До 25 человек
+                        </p>
+                        <p class="_main-text">
+                            <label>
+                                контакты
+                            </label>
+                            <a href="" target="_blank">+7 (900) 632-89-32</a>
+                            <a href="" target="_blank">sale@diplomat-hotel.spb.ru</a>
+                        </p>
+                        <p class="_main-text">
+                            <label>
+                                Рассадка
+                            </label>
+                            Театр, П-образно, круглый стол
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper" data-replace-element>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="info-card">
+                                <img src="img/conference/conference-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="info-card">
+                                <img src="img/conference/conference-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="info-card">
+                                <img src="img/conference/conference-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    @@include('html/parts/booking.html',{})
+
+
+    @@include('html/parts/amenities.html',{})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

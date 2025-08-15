@@ -58,7 +58,6 @@
         }
     }
 
-    .restourant-btns {}
 
     .swiper {
         @media (min-width:1025px) {
@@ -75,6 +74,91 @@
                 height: 100%;
                 object-fit: cover;
                 pointer-events: none;
+            }
+        }
+    }
+
+    &.conference-page {
+        ._decor {
+            left: 127px;
+            transform: translate(0, -30%);
+        }
+
+        ._bread {
+            position: static;
+            margin-bottom: 20px;
+        }
+
+        .section__top {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
+        .section__content {
+            max-width: 700px;
+
+            @media (min-width:1025px) {
+                display: flex;
+                flex-direction: column;
+            }
+
+            & > p {
+                margin-bottom: 40px;
+
+                @media (max-width:1024px) {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                @media (max-width:768px) {
+                    font-size: 14px;
+                }
+
+                @media (max-width:600px) {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        h1 {}
+
+        ._btn {
+            margin-bottom: 30px;
+            width: fit-content;
+
+            @media (max-width:1024px) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .section__body {
+            @media (min-width:1025px) {
+                display: flex;
+                justify-content: space-between;
+                gap: 40px;
+            }
+        }
+
+        .chars {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: auto;
+
+            @media (max-width:768px) {
+                gap: 30px 10px;
+            }
+
+            ._main-text:has(a) {
+                padding-left: 0;
+                border-left: 0;
+            }
+        }
+
+        .swiper {
+            @media (min-width:1025px) {
+                width: 43%;
             }
         }
     }

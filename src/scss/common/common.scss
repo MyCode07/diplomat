@@ -16,6 +16,14 @@ body {
 
     background-color: $white;
 
+    @media (max-width:768px) {
+        font-size: 14px;
+    }
+
+    @media (max-width:600px) {
+        font-size: 10px;
+    }
+
     &._noscroll {
         overflow: hidden;
     }
@@ -118,6 +126,7 @@ h2,
 }
 
 h3 {}
+
 
 ._btn {
     display: flex;
@@ -527,12 +536,12 @@ ul.page-numbers {
 
 ._mobile {
     @media (min-width:1025px) {
-        display: none;
+        display: none !important;
     }
 }
 
 ._desktop {
     @media (max-width:1024px) {
-        display: none;
+        display: none !important;
     }
 }

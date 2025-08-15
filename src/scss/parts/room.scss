@@ -1,5 +1,5 @@
 .page-top {
-    padding-top: 170px;
+    padding-top: 228px;
 
     @media (max-width:768px) {
         padding-top: 113px;
@@ -87,11 +87,7 @@
                 }
             }
 
-            ._main-text {
-                margin-bottom: 20px;
-                max-width: 470px;
-                width: 100%;
-            }
+
 
             .image {
                 margin-top: 20px;
@@ -111,7 +107,37 @@
         }
     }
 
+    ._main-text {
+        max-width: 470px;
+        width: 100%;
+    }
+}
 
+._main-text {
+    max-width: 470px;
+    width: 100%;
+
+    @media (max-width:768px) {
+        font-size: 12px;
+    }
+
+    @media (max-width:600px) {
+        font-size: 10px;
+    }
+
+    label {
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+
+        @media (max-width:600px) {
+            font-size: 12px;
+        }
+    }
+
+    a {
+        display: block;
+    }
 }
 
 .booking {
