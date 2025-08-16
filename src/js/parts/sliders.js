@@ -138,7 +138,33 @@ if (sliders.length) {
                 },
             });
         }
+
+        if (slider.closest('.early-booking')) {
+            new Swiper(slider, {
+                modules: [
+                    Pagination
+                ],
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+            });
+        }
+
+        if (slider.closest('.romantic')) {
+            new Swiper(slider, {
+                modules: [
+                    Pagination
+                ],
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+            });
+        }
     })
 }
-
-

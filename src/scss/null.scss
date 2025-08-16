@@ -1,5 +1,4 @@
 /*Обнуление*/
-
 * {
     padding: 0;
     margin: 0;
@@ -40,18 +39,18 @@ body {
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 input,
 button,
 textarea {
     font-family: inherit;
-    background-color: inherit;
+    background-color: inherit
 }
 
 input::-ms-clear {
-    display: none;
+    display: none
 }
 
 button {
@@ -64,8 +63,7 @@ button::-moz-focus-inner {
     border: 0;
 }
 
-a {
-}
+a {}
 
 a,
 a:visited,

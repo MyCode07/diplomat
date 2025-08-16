@@ -6,7 +6,6 @@
     left: 0;
     width: 100%;
     z-index: 15;
-
     transition: all 0.3s ease 0s;
 
     &._sticky {
@@ -45,6 +44,10 @@
                 }
             }
         }
+
+        .header__burger span {
+            background-color: $black;
+        }
     }
 
     &._dark:not(._sticky) {
@@ -82,22 +85,26 @@
     }
 
     // .header__container
-
     &__container {}
 
     // .header__body
-
     &__body {
         @media (min-width:1025px) {
             display: grid;
             grid-template-columns: 1fr 15vw 1fr;
             gap: 34px;
             align-items: end;
+
+            @media (max-width:1600px) {
+                gap: 24px;
+            }
+
+            @media (max-width:1200px) {
+                gap: 20px;
+            }
         }
 
-
         nav {
-
             @media (max-width:1440px) {
                 font-size: 14px;
             }
@@ -121,6 +128,10 @@
                     position: relative;
                     transition: all 0.3s ease 0s;
 
+                    @media (max-width:1600px) {
+                        padding: 10px 7px;
+                    }
+
                     @media (any-hover: hover) {
                         &:hover {
                             @include linkHover;
@@ -135,12 +146,16 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-
-                        height: 15px;
-                        width: 15px;
+                        height: 13px;
+                        width: 13px;
 
                         @media (any-hover: hover) {
                             display: none;
+                        }
+
+                        @media (max-width:1200px) {
+                            width: 10px;
+                            height: 10px;
                         }
 
                         svg {
@@ -148,7 +163,6 @@
                             transition: all 0.3s ease 0s;
                         }
                     }
-
 
                     & > ul {
                         position: absolute;
@@ -159,7 +173,6 @@
                         height: 0;
                         opacity: 0;
                         padding-inline: 20px;
-
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;
@@ -172,7 +185,6 @@
 
                             a {
                                 display: flex;
-
                                 width: 100%;
                                 padding: 10px 0;
                             }
@@ -193,7 +205,6 @@
                     }
                 }
 
-
                 li[data-open="open"] {
                     background-color: $accent;
 
@@ -208,13 +219,11 @@
                         height: auto;
                     }
                 }
-
             }
         }
     }
 
     // .header__left
-
     &__left {
         display: flex;
         align-items: center;
@@ -235,19 +244,16 @@
     }
 
     // .header__center
-
     &__center {
         @media (max-width:1024px) {
             display: flex;
             align-items: center;
-
             gap: 20px;
             justify-content: space-between;
         }
     }
 
     // .header__logo
-
     &__logo {
         width: fit-content;
         display: block;
@@ -256,12 +262,15 @@
             margin-inline: auto;
         }
 
-
         svg {
             width: 181px;
             height: 87px;
-
             transition: all 0.3s ease 0s;
+
+            @media (max-width:1200px) {
+                width: 150px;
+                height: 73px;
+            }
 
             @media (max-width:1024px) {
                 width: 84px;
@@ -271,7 +280,6 @@
     }
 
     // .header__burger
-
     &__burger {
         @media (min-width:1025px) {
             display: none;
@@ -304,7 +312,6 @@
     }
 
     // .header__right
-
     &__right {
         display: flex;
         align-items: center;
@@ -328,17 +335,13 @@
             font-size: 12px;
         }
     }
-
-
 }
-
 
 .lang {
     display: flex;
     align-items: center;
     gap: 6px;
     width: fit-content;
-
     margin-left: auto;
     text-transform: uppercase;
 

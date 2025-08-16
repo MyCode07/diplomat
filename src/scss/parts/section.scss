@@ -2,17 +2,13 @@
     position: relative;
     @include adaptive-value('margin-bottom', 210, 90, 1);
 
-
     // .section__container
-
     &__container {}
 
     // .section__body
-
     &__body {}
 
     // .section__top
-
     &__top {
         margin-bottom: 60px;
 
@@ -22,7 +18,6 @@
     }
 
     // .section__flex
-
     &__flex {
         display: flex;
         justify-content: space-between;
@@ -33,17 +28,14 @@
         }
 
         // .section__flex-right
-
         &-right {}
 
         // .section__flex-left
-
         &-left {}
     }
 }
 
 .about {
-
     .section__body {
         @media (min-width:1025px) {
             display: grid;
@@ -59,14 +51,11 @@
     }
 
     // .about-content
-
     &-content {
         display: flex;
         flex-direction: column;
 
-
         // .about-content__top
-
         &__top {
             display: flex;
             gap: 38px;
@@ -85,7 +74,6 @@
         }
 
         // .about-content__flex
-
         &__flex {
             display: flex;
             align-items: center;
@@ -182,21 +170,16 @@
         overflow: visible;
 
         // .swiper-wrapper
-
         &-wrapper {}
 
         // .swiper-slide
-
         &-slide {
             width: fit-content;
         }
     }
-
-
 }
 
 .offers {
-
     .section__top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -216,7 +199,6 @@
             }
         }
     }
-
 
     ._decor {
         transform: translate(0, -38%);
@@ -240,7 +222,6 @@
         overflow: visible;
 
         // .swiper-slide
-
         &-slide {
             width: fit-content;
         }
@@ -248,7 +229,6 @@
 }
 
 .restourant {
-
     .section__body {
         @media (min-width:1025px) {
             display: flex;
@@ -274,16 +254,13 @@
         }
     }
 
-
     // .restourant-contnet
-
     &-contnet {
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
         min-width: 0;
         min-height: 0;
-
 
         p {
             @media (max-width:600px) {
@@ -301,13 +278,10 @@
 
             &-wrapper {}
 
-
             &-slide {
                 width: 252px;
                 display: flex;
                 flex-direction: column;
-
-
 
                 img,
                 picture {
@@ -328,7 +302,6 @@
     }
 
     // .restourant-btns
-
     &-btns {
         margin-top: 40px;
         display: flex;
@@ -342,7 +315,6 @@
         }
     }
 
-
     .image {
         width: 41%;
         flex: 0 0 auto;
@@ -354,10 +326,7 @@
         }
 
         .swiper {
-
-
             &-wrapper {}
-
 
             &-slide {
                 max-height: 842px;
@@ -369,9 +338,7 @@
         min-width: 0;
         min-height: 0;
 
-
         &-wrapper {}
-
 
         &-slide {
 
@@ -386,7 +353,6 @@
 .conference {
 
     // .conference-flex
-
     &-flex {
         @media (min-width:1025px) {
             display: flex;
@@ -399,7 +365,6 @@
     }
 
     // .conference-slider
-
     &-slider {
         flex: 1 1 auto;
         min-width: 0;
@@ -414,7 +379,6 @@
             }
 
             &-wrapper {}
-
 
             &-slide {}
         }
@@ -431,13 +395,11 @@
     }
 
     // .conference-image
-
     &-image {
         width: 41%;
         flex: 0 0 auto;
         min-width: 0;
         min-height: 0;
-
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -453,18 +415,13 @@
             }
         }
 
-
         @media (max-width:1024px) {
             width: 100%;
         }
     }
-
-
-
 }
 
 .services {
-
     .section__body {
         @media (min-width:1025px) {
             display: flex;
@@ -474,13 +431,11 @@
     }
 
     // .services-content
-
     &-content {
         max-width: 440px;
         margin-inline: auto;
         width: 50%;
         flex: 0 0 auto;
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -522,7 +477,6 @@
     }
 
     // .services-slider
-
     &-slider {
         position: relative;
 
@@ -542,7 +496,6 @@
             }
 
             &-wrapper {}
-
 
             &-slide {}
         }
@@ -618,14 +571,12 @@
 .service {
 
     // .service-content
-
     &-content {
         @media (min-width:1025px) {
             padding-left: 97px;
             display: flex;
             flex-direction: column;
         }
-
 
         .section__top {
             flex: 1 1 auto;
@@ -711,7 +662,6 @@
     }
 
     // .service-text
-
     &-text {
         span {
             display: block;
@@ -745,7 +695,6 @@
     }
 
     // .service-image
-
     &-image {
         .image {
             position: relative;
@@ -754,7 +703,6 @@
             picture {
                 display: block;
             }
-
 
             &:before {
                 position: absolute;
@@ -777,7 +725,6 @@
     }
 
     // .service-reverse
-
     &-reverse {
         .service-image {
             order: 2;
@@ -792,7 +739,6 @@
     }
 
     // .service-gym
-
     &-gym {
         position: relative;
 
@@ -824,13 +770,10 @@
     }
 
     // .service-sale
-
     &-sale {
         .service-image {
             order: 2;
         }
-
-
 
         .section__top {
             position: relative;
@@ -876,10 +819,8 @@
 }
 
 .about-page {
-
     .section__top {
         position: relative;
-
 
         ._decor {
             left: 112px;
@@ -901,7 +842,6 @@
     }
 
     // .about-page__flex
-
     &__flex {
         display: flex;
         gap: 30px;
@@ -912,7 +852,6 @@
     }
 
     // .about-page__left
-
     &__left {
         @media (min-width:1025px) {
             width: 40%;
@@ -973,7 +912,6 @@
     }
 
     // .about-page__right
-
     &__right {
         min-height: 0;
         min-width: 0;
@@ -1011,7 +949,6 @@
 .story {
 
     // .story-top
-
     &-top {
         position: relative;
 
@@ -1021,7 +958,7 @@
 
         ._decor {
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -20%);
 
             @media (max-width:1024px) {
                 left: unset;
@@ -1029,9 +966,12 @@
                 transform: translate(0, 50%);
             }
         }
+
+        p {
+            margin-top: 30px;
+            max-width: 400px;
+        }
     }
-
-
 
     .grid {
         &:not(:last-child) {
@@ -1054,10 +994,17 @@
             }
         }
 
-
         .image {
+            min-width: 0;
+            min-height: 0;
+
             @media (min-width:1025px) {
                 margin-right: 97px;
+            }
+
+            .swiper {
+                min-width: 0;
+                min-height: 0;
             }
         }
 
@@ -1113,7 +1060,6 @@
 }
 
 .contacts-page {
-
     .section__body {
         display: flex;
         flex-direction: column;
@@ -1125,7 +1071,6 @@
     }
 
     // .contacts-page__top
-
     &__top {
         @media (min-width:1025px) {
             display: flex;
@@ -1193,7 +1138,6 @@
     .map {
 
         // .map-top
-
         &-top {
             display: flex;
             justify-content: space-between;
@@ -1213,6 +1157,129 @@
             p {
                 max-width: 460px;
             }
+        }
+    }
+}
+
+.offers-page {
+    .section__top {
+        position: relative;
+
+        ._bread {
+            margin-bottom: 20px;
+        }
+
+        ._decor {
+            left: unset;
+            right: 0;
+            transform: translate(0, -20%);
+
+            @media (max-width:1024px) {
+                right: unset;
+                left: -20px;
+                transform: translate(0, 0);
+            }
+        }
+    }
+}
+
+.early-booking {
+    .story-top ._decor {
+        @media (max-width:1024px) {
+            right: unset;
+            left: -20px;
+        }
+    }
+}
+
+.romantic {
+    .section__top {
+        position: relative;
+
+        ._bread {
+            margin-bottom: 20px;
+        }
+
+        ._decor {
+            @media (min-width:1205px) {
+                left: 78px;
+                transform: translate(0, -20%);
+            }
+        }
+    }
+
+    // .romantic-flex
+    &-flex {
+        @media (min-width:1025px) {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+        }
+    }
+
+    // .romantic-sldier
+    &-sldier {
+        @media (min-width:1025px) {
+            width: 40%;
+            flex: 0 0 auto;
+            position: relative;
+
+            ._main-text {
+                position: absolute;
+                top: 0;
+                left: calc(100% + 98px);
+                max-width: 420px;
+            }
+        }
+
+        @media (max-width:1024px) {
+            margin-bottom: 30px;
+        }
+
+        ._main-text {
+            @media (max-width:1024px) {
+                margin-bottom: 30px;
+                max-width: 600px;
+            }
+        }
+    }
+
+    .image {
+        width: 32%;
+        flex: 0 0 auto;
+
+        @media (max-width:1024px) {
+            display: none;
+        }
+    }
+
+    ._decor {}
+
+    ._bread {}
+
+    ._main-text {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .swiper {}
+}
+
+.tariff {
+    .grid {
+        @media (max-width:768px) {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
+
+    // .tariff-text
+    &-text {
+        margin-top: 65px;
+        max-width: 500px;
+
+        @media (max-width:1024px) {
+            margin-top: 30px;
         }
     }
 }
