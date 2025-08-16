@@ -26,15 +26,34 @@
     }
 
     &._dark {
-        
+        button svg {
+            stroke: $accent;
+        }
+
+        li[data-open=open] {
+            color: $white;
+
+            button svg {
+                stroke: $white;
+            }
+        }
+
+        li {
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
     }
 
     &._dark:not(._sticky) {
         color: $accent;
 
         .header__logo {
+
             svg,
-                path {
+            path {
                 fill: $accent;
             }
         }

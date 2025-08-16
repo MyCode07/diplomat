@@ -10,16 +10,8 @@ const menuCloseBtn = document.querySelector('.menu__close');
 
 if (burger) {
     burger.addEventListener('click', (e) => {
-        menu.classList.toggle('_open');
         menuMobile.classList.toggle('_open');
         burger.classList.toggle('_active');
-
-        if (menu.classList.contains('_open')) {
-            // lockPadding();
-        }
-        else {
-            // unLockPadding();
-        }
     })
 }
 
@@ -88,3 +80,11 @@ if (submenuList.length) {
         }
     }
 }
+
+document.addEventListener('click', function (e) {
+    let targetEl = e.target;
+
+    if (!targetEl.closest('li[data-open]') && document.querySelector('li[data-open]')) {
+        document.querySelector('li[data-open]').removeAttribute('data-open')
+    }
+})

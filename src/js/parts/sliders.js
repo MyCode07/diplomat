@@ -124,6 +124,20 @@ if (sliders.length) {
                 spaceBetween: 10,
             });
         }
+
+        if (slider.closest('.about-page')) {
+            new Swiper(slider, {
+                modules: [
+                    Pagination
+                ],
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+            });
+        }
     })
 }
 
