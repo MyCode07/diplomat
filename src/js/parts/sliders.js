@@ -166,5 +166,32 @@ if (sliders.length) {
                 },
             });
         }
+
+        if (slider.closest('.weekend') && window.innerWidth <= 1025) {
+            new Swiper(slider, {
+                modules: [
+                    Pagination
+                ],
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+            });
+        }
+        if (slider.closest('.comfort')) {
+            new Swiper(slider, {
+                modules: [
+                    Pagination
+                ],
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+            });
+        }
     })
 }
