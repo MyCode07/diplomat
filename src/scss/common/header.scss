@@ -353,10 +353,6 @@
         font-size: 12px;
     }
 
-    span {
-        color: $grey;
-    }
-
     a {
         width: 35px;
         height: 35px;
@@ -366,5 +362,9 @@
         text-align: center;
         border-radius: 50%;
         border: 1px solid currentColor;
+    }
+
+    .current-lang {
+        color: $grey;
     }
 }
