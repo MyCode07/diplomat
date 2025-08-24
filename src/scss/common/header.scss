@@ -327,6 +327,14 @@
     ._btn {
         color: $white;
 
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $white;
+                color: $black ;
+                border-color: $white;
+            }
+        }
+
         @media (max-width:1440px) {
             font-size: 14px;
         }
@@ -362,10 +370,27 @@
         text-align: center;
         border-radius: 50%;
         border: 1px solid currentColor;
+        transition: all 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $white;
+                background-color: $accent;
+            }
+        }
     }
 
     .current-lang {
         color: $grey;
         order: -1;
+    }
+}
+
+._sticky .lang a {
+    @media (any-hover: hover) {
+        &:hover {
+            color: $black;
+            background-color: $white;
+        }
     }
 }

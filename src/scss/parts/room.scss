@@ -22,11 +22,9 @@
     }
 
     // .room__container
-
     &__container {}
 
     // .room__body
-
     &__body {
         @media (min-width:1025px) {
             display: flex;
@@ -57,17 +55,14 @@
     }
 
     // .room__content
-
     &__content {
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         position: relative;
 
         // .room__content-info
-
         &-info {
             max-width: 840px;
 
@@ -87,8 +82,7 @@
                 }
             }
 
-
-            ._main-text{
+            ._main-text {
                 margin-bottom: 20px;
             }
 
@@ -155,7 +149,6 @@
 }
 
 .advantages {
-
     .section__top {
         h2 {
             margin-top: 20px;
@@ -163,7 +156,6 @@
     }
 
     // .advantages-list
-
     &-list {
         .grid {
             @media(max-width:1024px) {
@@ -221,7 +213,6 @@
                     }
 
                     span {
-
                         @media (max-width:768px) {
                             font-size: 14px;
                         }
@@ -236,7 +227,6 @@
     }
 
     // .advantages-room
-
     &-room {
         margin-top: 80px;
 
@@ -271,7 +261,6 @@
 .amenities {
 
     // .amenities__top
-
     .section__top {
         h2 {
             margin-top: 20px;
@@ -297,16 +286,16 @@
             transform: translate(0, -40%);
         }
     }
-
 }
 
 .icon-grid {
-    li {
+
+    a,
+    li:not(:has(a)) {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
-
         border-right: 1px solid $accent;
 
         @media (min-width:1025px) {

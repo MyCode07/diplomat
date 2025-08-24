@@ -1203,6 +1203,24 @@
         label {
             text-transform: uppercase;
         }
+
+        h2 {
+            margin-bottom: 20px;
+
+            @media (max-width:1024px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        span {
+            display: block;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+
+            @media (max-width:1024px) {
+                margin-bottom: 40px;
+            }
+        }
     }
 }
 

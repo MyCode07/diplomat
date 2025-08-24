@@ -140,6 +140,14 @@ h3 {}
     // ._btn-border
     &-border {
         border: 1px solid currentColor;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent;
+                color: $white;
+                border-color: $accent;
+            }
+        }
     }
 
     // ._btn-accent
@@ -147,6 +155,13 @@ h3 {}
         background-color: $accent;
         color: $white;
         border: 0;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
     }
 }
 
@@ -434,6 +449,16 @@ button.next {
 
         @media (max-width:768px) {
             font-size: 14px;
+        }
+    }
+
+    a {
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+            }
         }
     }
 }
