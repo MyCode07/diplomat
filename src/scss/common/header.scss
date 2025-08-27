@@ -22,6 +22,10 @@
                 align-items: center;
             }
         }
+
+        .header__burger span {
+            background-color: $white !important;
+        }
     }
 
     &._dark {

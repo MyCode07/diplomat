@@ -391,6 +391,13 @@
     flex-direction: column;
     gap: 30px;
 
+    &:not(:last-child) {
+        @media (max-width:768px) {
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba($color: $black, $alpha: 0.15);
+        }
+    }
+
     ._main-text {}
 
     h3 {

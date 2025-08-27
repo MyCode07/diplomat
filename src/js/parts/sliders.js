@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, FreeMode, Thumbs } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const sliders = document.querySelectorAll('.swiper');
 if (sliders.length) {
@@ -53,9 +53,14 @@ if (sliders.length) {
             if (slider.closest('.restourant-contnet')) {
                 new Swiper(slider, {
                     modules: [
+                        Autoplay
                     ],
                     spaceBetween: 10,
                     slidesPerView: 'auto',
+                    autoplay: {
+                        delay: 4000,
+                        pauseOnMouseEnter: true
+                    }
                 });
             }
         }
@@ -120,8 +125,13 @@ if (sliders.length) {
 
         if (slider.closest('.restourant-menu__list')) {
             new Swiper(slider, {
+                modules: [Autoplay],
                 slidesPerView: 'auto',
                 spaceBetween: 10,
+                autoplay: {
+                    delay: 4000,
+                    pauseOnMouseEnter: true
+                }
             });
         }
 
